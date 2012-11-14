@@ -1,0 +1,6 @@
+<form action="/validacao/" method="post">
+    {% csrf_token %}
+    {{ formUsuario }}
+    <br />
+    <input type="submit" value="Enviar" />
+</form>
