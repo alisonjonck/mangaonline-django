@@ -1,6 +1,97 @@
-<form action="/validacao/" method="post">
-    {% csrf_token %}
-    {{ formUsuario }}
-    <br />
-    <input type="submit" value="Enviar" />
+FORMULARIO PARA CADASTRO DE USUARIO<br/><br/>
+<a href='../socioeconomico'><button>SOCIO-ECONOMICO</button></a>
+<!-- TODO Alison: Arrumar o for dos Labels-->
+<form action="/usuario/" method="post">
+    {{ formUsuario.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ formUsuario.nome.errors }}
+        <label for="id_subject">Nome:</label>
+        {{ formUsuario.nome }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.sobrenome.errors }}
+        <label for="id_message">Sobrenome:</label>
+        {{ formUsuario.sobrenome }}
+    </div>
+
+    <div class="fieldWrapper">
+        {{ formUsuario.data_nascimento.errors }}
+        <label for="id_message">Nascimento:</label>
+        {{ formUsuario.data_nascimento }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.nome_pai.errors }}
+        <label for="id_message">Nome pai:</label>
+        {{ formUsuario.nome_pai }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.nome_mae.errors }}
+        <label for="id_message">Nome mãe:</label>
+        {{ formUsuario.nome_mae }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.email.errors }}
+        <label for="id_message">Email:</label>
+        {{ formUsuario.email }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.senha.errors }}
+        <label for="id_message">Senha:</label>
+        {{ formUsuario.senha }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.rua.errors }}
+        <label for="id_message">Rua:</label>
+        {{ formUsuario.rua }}
+
+        {{ formUsuario.numero_casa.errors }}
+        <label for="id_message">Número:</label>
+        {{ formUsuario.numero_casa }}
+        
+        {{ formUsuario.bairro.errors }}
+        <label for="id_message">Bairro:</label>
+        {{ formUsuario.bairro }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.cep.errors }}
+        <label for="id_message">CEP:</label>
+        {{ formUsuario.cep }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.rg.errors }}
+        <label for="id_message">RG:</label>
+        {{ formUsuario.rg }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.cpf.errors }}
+        <label for="id_message">CPF:</label>
+        {{ formUsuario.cpf }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.sexo.errors }}
+        <label for="id_message">Sexo:</label>
+        {{ formUsuario.sexo }}
+    </div>
+
+    <div class="fieldWrapper">
+        {{ formUsuario.estado_civil.errors }}
+        <label for="id_message">Estado civil:</label>
+        {{ formUsuario.estado_civil }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.telefone_residencial.errors }}
+        <label for="id_message">Telefone residencial:</label>
+        {{ formUsuario.telefone_residencial }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.telefone_celular.errors }}
+        <label for="id_message">Telefone celular:</label>
+        {{ formUsuario.telefone_celular }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formUsuario.cidade.errors }}
+        <label for="id_message">Cidade:</label>
+        {{ formUsuario.cidade }}
+    </div>
+    <p><input type="submit" value="Enviar" /></p>
 </form>

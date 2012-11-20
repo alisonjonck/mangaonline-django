@@ -1,6 +1,72 @@
-<form action="/validacao/" method="post">
-    {% csrf_token %}
-    {{ formSocioeconomico }}
-    <br />
-    <input type="submit" value="Enviar" />
+FORMULARIO SOCIOECONOMICO<br/><br/>
+<a href='../usuario'><button>USUARIO</button></a>
+<!-- TODO Alison: Arrumar o for dos Labels-->
+<form action="/validacaoSocioeconomico/" method="post">
+    {{ formSocioeconomico.non_field_errors }}
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.etnia.errors }}
+        <label for="id_subject">Etnia:</label>
+        {{ formSocioeconomico.etnia }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.moradia1.errors }}
+        <label for="id_subject">Moradia 1:</label>
+        {{ formSocioeconomico.moradia1 }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.moradia2.errors }}
+        <label for="id_subject">Moradia 2:</label>
+        {{ formSocioeconomico.moradia2 }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.mora_com_quem.errors }}
+        <label for="id_subject">Mora com quem:</label>
+        {{ formSocioeconomico.mora_com_quem }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.mora_quantas_pessoas.errors }}
+        <label for="id_subject">Mora com quantas pessoas:</label>
+        {{ formSocioeconomico.mora_quantas_pessoas }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.meio_transporte.errors }}
+        <label for="id_subject">Meio transporte:</label>
+        {{ formSocioeconomico.meio_transporte }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.atividade_remunerada.errors }}
+        <label for="id_subject">Atividade remunerada:</label>
+        {{ formSocioeconomico.atividade_remunerada }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.renda_mensal_individual.errors }}
+        <label for="id_subject">Renda mensal individual:</label>
+        {{ formSocioeconomico.renda_mensal_individual }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.pais_conjuge_falescidos.errors }}
+        <label for="id_subject">Pais ou conjuge falescidos:</label>
+        {{ formSocioeconomico.pais_conjuge_falescidos }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.situacao_conjugal_pais.errors }}
+        <label for="id_subject">Situação conjugal dos pais:</label>
+        {{ formSocioeconomico.situacao_conjugal_pais }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.filhos.errors }}
+        <label for="id_subject">Filhos:</label>
+        {{ formSocioeconomico.filhos }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.pensao_filhos_ex.errors }}
+        <label for="id_subject">Pensão de filhos:</label>
+        {{ formSocioeconomico.pensao_filhos_ex }}
+    </div>
+    <div class="fieldWrapper">
+        {{ formSocioeconomico.bolsa_academica.errors }}
+        <label for="id_subject">Bolsa acadêmica:</label>
+        {{ formSocioeconomico.bolsa_academica }}
+    </div>
+    <p><input type="submit" value="Enviar" /></p>
 </form>
